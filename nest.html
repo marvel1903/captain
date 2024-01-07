@@ -177,13 +177,12 @@ dataTable['wind'] = Le.fit_transform (dataTable['wind'])
 dataTable['play'] = Le.fit_transform (dataTable['play'])
 dataTable
 
-print("KFMSCIT014 Shipra Jana")
+
 y = dataTable['play']
 x = dataTable.drop(['play'], axis=1)
 x.dtypes
 
 from sklearn import tree
-print("KFMSCIT014 Shipra Jana")
 clf = tree.DecisionTreeClassifier(criterion = 'entropy')
 clf = clf.fit(x,y)
 tree.plot_tree(clf)
