@@ -171,17 +171,16 @@ dataTable.columns
 
 from sklearn.preprocessing import LabelEncoder
 Le = LabelEncoder()
-dataTable['day'] = Le.fit_transform(dataTable ['day'])
-dataTable['outlook'] = Le.fit_transform(dataTable ['outlook'])
-dataTable['temp'] = Le.fit_transform (dataTable ['temp'])
-dataTable['humidity'] = Le.fit_transform(dataTable['humidity'])
-dataTable['wind'] = Le.fit_transform (dataTable['wind'])
-dataTable['play'] = Le.fit_transform (dataTable['play'])
+dataTable['Day'] = Le.fit_transform(dataTable ['Day'])
+dataTable['Outlook'] = Le.fit_transform(dataTable ['Outlook'])
+dataTable['Humidity'] = Le.fit_transform(dataTable['Humidity'])
+dataTable['Wind'] = Le.fit_transform (dataTable['Wind'])
+dataTable['Play_Tennis'] = Le.fit_transform (dataTable['Play_Tennis'])
 dataTable
 
 
-y = dataTable['play']
-x = dataTable.drop(['play'], axis=1)
+y = dataTable['Play_Tennis']
+x = dataTable.drop(['Play_Tennis'], axis=1)
 x.dtypes
 
 from sklearn import tree
